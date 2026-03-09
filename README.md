@@ -1,60 +1,84 @@
 # Rodri Ballon D'Or Season Review
 
 # Project Overview
-* (Text)
+* The idea of this project is to analyse the defensive and attacking attributes of Rodri's Balon D'or winning season, against other players that play in his position from across the different leagues `(EPL, La Liga, Ligue 1, Bundesliga)`.
 # Code Overview
 
 ### _Imports_
 <img width="843" height="472" alt="Image" src="https://github.com/user-attachments/assets/5caf45a5-2ec5-464d-8a1e-60df1788a3b2" />
 
-* (Text)
+* I imported all libaries that were needed to manipluate the data and create graphs and charts.
+* Using `'set_option()'` function. I displayed specific number of rows and columns.
+* Modifiying the layout with `'IPython.display'` and importing `'display'` & `'HTML'` to render HTML content to the workbook.
 ----------------
 ### _Opening & Reading File_
 <img width="3724" height="607" alt="Image" src="https://github.com/user-attachments/assets/11834c6c-505e-432c-b203-3cba0d581d1f" />
 
-* (Text)
+* I created a variable that read and storef the `csv` file using the `read_excel()` function.
+* Then showed the DataFrame, while using the `head()` function to only show wanted rows.
 
 ### _Shape_
 <img width="642" height="114" alt="Image" src="https://github.com/user-attachments/assets/a6d867ef-3bfa-426d-84c7-6641afdbd158" />
 
-* (Text)
+* I looked at how many `Columns` & `Rows` in the DataFrame using `shape`.
 
 ### _Describe_
 <img width="3708" height="573" alt="Image" src="https://github.com/user-attachments/assets/b496daf7-3250-4c21-b88b-a2bc2193ec65" />
 
-* (Text)
+* To see the numerical destription of each column on attributes such as  `Count`, `Mean` & `Standard Deviation (STD)` the `describe()` function was used.  
 
 ### _Open And Read - Other Leagues_
 <img width="3753" height="1584" alt="Image" src="https://github.com/user-attachments/assets/5a04d7b5-a6bd-4ac7-9291-15a660765f73" />
 
-* (Text)
+* I used the previous process on all the data files for the other leagues.
 
  ### _Selecting Players By Positions_
 <img width="3725" height="587" alt="Image" src="https://github.com/user-attachments/assets/efc2ece6-14ae-4314-a5d2-9d990d26d37b" />
 
-* (Text)
+* Create a variable to store the values. Index the data by `Column` and `Values` of the column.  
 
 ### _Combining English Players DataFrames_
 <img width="2450" height="578" alt="Image" src="https://github.com/user-attachments/assets/36ea35ae-cd31-49b8-9122-bd1dd0c59722" />
 
- (Text)
+* I placed all the DataFrames created for English players into a variable and changed them into a `list format ([])`
+* A variable was created, with pandas `(pd)` and I used `concat` function on the DataFrame made previous to combine and store all the DataFrames.
+* I then called DataFrame with selected columns to show the outcome. 
 
  ### _Combining All DataFrames DataFrames_
 <img width="3734" height="376" alt="Image" src="https://github.com/user-attachments/assets/0eb92693-de8d-46db-8e05-5df956fce70c" />
 
- (Text)
+* I repeated process for all the other leagues DataFrames.
 
  ### _Finding Defensive Mean_
 <img width="716" height="227" alt="Image" src="https://github.com/user-attachments/assets/a21b9b4c-be4c-48e1-8459-a70e1ec1195e" />
 
- (Text)
+* Iwanted to know what the `Mean` of all the values were, so in a varaible `(d_mean)` i stored the value from the `mean()` function on the selected column `[Defensive duels per 90]`.
 ---------------
-## **Defensive Graphs**
+## Defensive Graphs
 ### _Defensive Duels Per 90_
 
 <img width="1684" height="1275" alt="Image" src="https://github.com/user-attachments/assets/e7a5acc7-61d6-4991-b64d-78f48d701ca6" />
 
-*  (Text)
+* I used `figsize` to declare how high and wide the graph should be and then added values into the `()`
+* To plot `plt` the figures `x` & `y` axes, i used the `axes()` function.
+* I wanted to show the age of each player along with there names, as i think it is important to show what stage of their career these players were. To do this created a variable (`players_age`) to display both the players name and age.
+    * I called the column from the DataFrame that stores the player's names `[Player]`.
+    * Then i added a space & placed a `+` to connect the following `age` code.
+    * Inside a set of `''`, i added another space which was follwed by `\n`, this places the next code on a new line then add another space next to it. After that i next placed a `()`, a set of `''` and 2 more `+`, with spaces around them, and inbetweeen them called the `DataFrame [plyr_dfs]` and `Column ['Age']`.After this i needed to change the data to a `String` using `astype()` function and placed `'str'` in the `()`.
+* To plot the bars. I created the variable `bars` and used `plt.bar()`function. Inside the brackets i called the variable created above `players_age`(this is used for the `x-axis`), and next i called the DataFrame and column desired `(plyr_dfs['Defensive duels per 90']`), then i added the bar `color`, which was chosen to be blue.
+* I wanted to show the AVG line this attribute. I plotted the line with `plt.axhline`(axis horizontal line) function. Inside the brackets I created a variable for the `y-axis (y)` and assigned it the value from the `d_mean` variable previously made. I then styled the line with `color`, `linestyle`(dotted / dashed) and the `linewidth` (by numerical value).
+* I wanted to highlight specific columns (Rodri, the highest & lowest player) to do this :
+   * I created new variable `mrk_plyr`,this is to highlight Rodri's values, i then follow it up with the numberical value that the bar appears on the graph `(3)`. After i useed the `bar` variable from above and placed the selected column `mrk_plyr` in `[]`, used the `set_color()` function and added the color in the brackets `(gold)`.
+   * This was then repeated for the lowest and the highest players to highlight the gap.
+ * I then wanted to show the value on each bar to make it clearer how far the distance was between each other. I did this by calling the `ax` variable and used the `.barlabel()` function. In this i called:
+   * The `bars` variable that was previously made to select each bar.
+   * I then used `fmt` (format) variable. Then in `''`, I wrote `%.1f`. This set value to 1 decimal place.
+   * I positioned the values at the edge of each bar with `label_type='edge'`.
+   * The values were then styled with `fontweight='bold` to make the text stand out, `color='black'` and `fontsize=14`.
+ * I then added X & Y labels and a title using the `plt.xlabel()`, `plt.ylabel()` & `plt.title()` function, then added text in `' '`, followed by stylings of `fontsize` and `fontweight`
+ * The x-axis labels needed rotating to fit properly so i used the `plt.xticks()` function and added `rotation=45` and `ha='center'` (Horizontal Alignment) inside the `()`.
+ * I wanted the background the highlight the bars more so i used `plt.gca()`(Get Current Axes) followed by `.set_facecolor('')` function to set the background color ('lightslategrey')
+ * Finally i used `plt.show()` to display the figure.
 
 <img width="871" height="707" alt="Image" src="https://github.com/user-attachments/assets/e735939a-4ab5-42f4-893c-33c6d8d60784" />
 
@@ -78,7 +102,7 @@
 ....* (Text)
 
 ----------------
-## **Attacking Graphs**
+## Attacking Graphs
 ### _Using sum() On Column To Find Each Players Value_
 
 <img width="655" height="498" alt="Image" src="https://github.com/user-attachments/assets/0452e48e-42ff-4af1-b719-68c2a802e211" />
