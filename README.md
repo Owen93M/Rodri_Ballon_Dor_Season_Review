@@ -130,12 +130,6 @@
 
 ------------
 
-### _Putting Columns Into List Format_
-
-<img width="420" height="460" alt="Image" src="https://github.com/user-attachments/assets/e2ef5516-74cc-471b-a7f7-b89ab76f6214" />
-
-*  (Text)
-
 ### _Pizza Graph - All Defensive KPI's_
 
 <img width="1540" height="1760" alt="Image" src="https://github.com/user-attachments/assets/8f659072-afb2-4350-b7eb-5bc4f5dc61b9" />
