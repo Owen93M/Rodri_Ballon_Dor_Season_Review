@@ -15,7 +15,7 @@
 <img width="3724" height="607" alt="Image" src="https://github.com/user-attachments/assets/11834c6c-505e-432c-b203-3cba0d581d1f" />
 
 * I created a variable that read and storef the `csv` file using the `read_excel()` function.
-* Then showed the DataFrame, while using the `head()` function to only show wanted rows.
+* Then I showed the DataFrame, while using the `head()` function to only show wanted rows.
 
 ### _Shape_
 <img width="642" height="114" alt="Image" src="https://github.com/user-attachments/assets/a6d867ef-3bfa-426d-84c7-6641afdbd158" />
@@ -42,17 +42,17 @@
 
 * I placed all the DataFrames created for English players into a variable and changed them into a `list format ([])`
 * A variable was created, with pandas `(pd)` and I used `concat` function on the DataFrame made previous to combine and store all the DataFrames.
-* I then called DataFrame with selected columns to show the outcome. 
+* I then called the DataFrame with selected columns to show the outcome. 
 
  ### _Combining All DataFrames DataFrames_
 <img width="3734" height="376" alt="Image" src="https://github.com/user-attachments/assets/0eb92693-de8d-46db-8e05-5df956fce70c" />
 
-* I repeated process for all the other leagues DataFrames.
+* I repeated the process for all the other leagues DataFrames.
 
  ### _Finding Defensive Mean_
 <img width="716" height="227" alt="Image" src="https://github.com/user-attachments/assets/a21b9b4c-be4c-48e1-8459-a70e1ec1195e" />
 
-* Iwanted to know what the `Mean` of all the values were, so in a varaible `(d_mean)` i stored the value from the `mean()` function on the selected column `[Defensive duels per 90]`.
+* I wanted to know what the `Mean` of all the values were, so in a varaible `(d_mean)` i stored the value from the `mean()` function on the selected column `[Defensive duels per 90]`.
 ---------------
 ## Defensive Graphs
 ### _Defensive Duels Per 90_
@@ -77,48 +77,65 @@
    * The values were then styled with `fontweight='bold` to make the text stand out, `color='black'` and `fontsize=14`.
  * I then added X & Y labels and a title using the `plt.xlabel()`, `plt.ylabel()` & `plt.title()` function, then added text in `' '`, followed by stylings of `fontsize` and `fontweight`
  * The x-axis labels needed rotating to fit properly so i used the `plt.xticks()` function and added `rotation=45` and `ha='center'` (Horizontal Alignment) inside the `()`.
- * I wanted the background the highlight the bars more so i used `plt.gca()`(Get Current Axes) followed by `.set_facecolor('')` function to set the background color ('lightslategrey')
+ * I wanted the background the highlight the bars more so i used `plt.gca()`(Get Current Axes) followed by `.set_facecolor('')` function to set the background color ('lightslategrey').
  * Finally i used `plt.show()` to display the figure.
 
 <img width="871" height="707" alt="Image" src="https://github.com/user-attachments/assets/e735939a-4ab5-42f4-893c-33c6d8d60784" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `P.Lees-Melou` was the `most` involved in defensive duels `(10.3)`. This could indicate that he was set in a more CDM role than a standard or attacking midfielder.
+    * `U.Racic` values indicate the opposite, and that he was possibly tasked wit a more attacking role as he had the `least` involvement in defensive duels `(4.4)`.
+    * `Rodri` would be the same as `U.Racic` as he had the `second lowest` `(5.6)` value so it would seem that he was also tasked with a more advanced role.
+
 ### _Defensive Duels Won_
 
-*  (Text)
+*  The same process was used for creating this graph as previous, just with another `column`.
 
 <img width="1369" height="1062" alt="Image" src="https://github.com/user-attachments/assets/b7278ed5-b54c-42f6-975c-866c052c61a8" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
+ 
 ### _Interceptions Per 90_
 
-*  (Text)
+* Like the previous codes except this was using a `Horizontal` bar chart.
 
 <img width="1460" height="926" alt="Image" src="https://github.com/user-attachments/assets/8d2a3ef0-b0d2-4df5-b835-94c4f46cf515" />
 
-1. (Text)
-....* (Text)
-
+* The results show that:
+    * `P.Lees-Melou` has the `highest` amount of interceptions `(6.7)`. Stronger positioning sense to place himself in the passing lanes to overturn possession.
+    * `R.Bentancur` registered the `lowest` interceptions `(3.7)`. This could be because he isnt as proficient at noticing when and where to intercept or positioning could be a detriment to be able to block passing lanes.
+    * `Rodri` interceptions `equalled` with 3 other players `(4)`. Not necessarily low, still offers chances to overturn possession, but higher position could make chances to intercept harder.
 ----------------
 ## Attacking Graphs
 ### _Using sum() On Column To Find Each Players Value_
 
 <img width="655" height="498" alt="Image" src="https://github.com/user-attachments/assets/0452e48e-42ff-4af1-b719-68c2a802e211" />
 
+* (Text)
+
 ### _Shot Per 90_
 
 <img width="1523" height="942" alt="Image" src="https://github.com/user-attachments/assets/9cd644c5-9a47-4dab-b917-0e91813ed165" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
+   
 ### _Shots On Target Per 90_
+
+*
 
 <img width="1483" height="1279" alt="Image" src="https://github.com/user-attachments/assets/0e58cd3f-c058-4ad0-8492-f9b776d6fa82" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
+    * 
 ### _Goal Conversion_
 
 <img width="1523" height="343" alt="Image" src="https://github.com/user-attachments/assets/9a312a8c-92b6-40bc-bd7a-6c365e1c3987" />
@@ -127,18 +144,24 @@
 
 <img width="1609" height="1442" alt="Image" src="https://github.com/user-attachments/assets/ad142d2c-9ab0-4e5b-b554-43f43098f707" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
+
 ### _Players Passing Accuracy_
 
 <img width="1468" height="1303" alt="Image" src="https://github.com/user-attachments/assets/a2255408-89d1-4795-bd10-eab2c718cad1" />
 
 *  (Text)
 
+
 <img width="1713" height="1217" alt="Image" src="https://github.com/user-attachments/assets/2a085c5b-c0ff-4491-8909-894c92023ea4" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
 ----------------
 
 ### _Recieved Passes Per 90 (Avg)_
@@ -149,8 +172,10 @@
 
 <img width="1332" height="1141" alt="Image" src="https://github.com/user-attachments/assets/950ee421-4c6c-415f-bd59-dc598977c958" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
 
 ------------
 
@@ -162,8 +187,10 @@
 
 <img width="976" height="1059" alt="Image" src="https://github.com/user-attachments/assets/b0596911-4894-4490-9cc7-69604a687d09" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
    
 ### _Total Season KPI;s_
 
@@ -173,8 +200,11 @@
 
 <img width="1586" height="1720" alt="Image" src="https://github.com/user-attachments/assets/12dbf07c-ade9-4553-9e5d-213bc324f0cd" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
+  
 ### _Using f-string To Show Each KPI's Value_
 
 <img width="946" height="804" alt="Image" src="https://github.com/user-attachments/assets/3679c15d-338c-4c2d-93a6-813b01ada0fe" />
@@ -187,5 +217,7 @@
 
 <img width="1523" height="1560" alt="Image" src="https://github.com/user-attachments/assets/e944d98c-500c-4aa5-b12c-b86caabb6614" />
 
-1. (Text)
-....* (Text)
+* The results show that:
+    * `E.Can` won the `most` defensive duels `(68.7)`. Showing that he was the most proficient at winning possession & stopping attacks.
+    * `M.Caicedo` had the `least`success in winning duels `(56.6)`. This could be a dip in form or his position makes it difficult to win challenges.
+    * `Rodri` again has the `second lowest` `(59.9)` value. It is another example of positioning being a probable contributor to winning defensive duels.
